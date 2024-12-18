@@ -1,0 +1,167 @@
+/* Back button styling */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 130px; /* Adjust for Sidebar width */
+    margin-top: 100px; /* Adjust for BannerMenu height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+.back-button {
+    position: absolute;
+    top: 90px; /* Adjust to sit below the BannerMenu */
+    left: 130px; /* Distance from the left edge of the page */
+    padding: 10px 20px;
+    margin: 40px;
+    font-size: 14px;
+    color: #633B48; /* Text color */
+    background-color: #f5f5f5; /* Button background */
+    border: 2px solid #633B48; /* Outline border */
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 0;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+  
+.back-button:hover {
+    background-color: #633B48; /* Change background to match border */
+    color: #f5f5f5; /* Change text color for contrast */
+    border: 2px solid #633B48; /* Retain border outline */
+}
+
+/* Decorations as Cards (Question 3) */
+.decorations {
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap to the next line */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Align to left */
+    align-items: flex-start; /* Align vertically */
+    margin: 0; /* Remove unnecessary margin */
+    padding: 10px; /* Add some padding around the container */
+}
+  
+.decoration {
+    display: inline-block;
+    width: 275px; /* Prevent the decoration from becoming too wide */
+    word-wrap: break-word; /* Ensure text wraps within the decoration */
+    overflow-wrap: break-word; /* Compatibility for text wrapping */
+    border: 1px solid #ccc; /* Example border */
+    padding: 10px; /* Add some padding inside the decoration */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding in the decoration's size */
+    background-color: #f9f9f9; /* Light background for decoration */
+    border-radius: 8px; /* Optional: rounded corners for decoration */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.decoration-link {
+    text-decoration: none; /* Remove underline from link */
+    color: blue; /* Inherit the parent color for consistency */
+  }
+  
+.decoration img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+  
+.decoration h2 {
+    font-size: 16px;
+    color: #633B48;
+}
+
+.decoration:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    justify-content: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 30;
+    right: 0px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: red;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: #f1f1f1;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between; /* Space out elements horizontally */
+    align-items: center; /* Vertically align elements */
+    border-bottom: 1px solid #ccc; /* Optional: Adds a separator line */
+    padding: 5px;
+}
+
+.room-header h2 {
+    font-size:20px;
+    font-weight: 1000;
+}
+
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Align items to the top */
+    gap: 5px; /* Add space between the elements */
+    max-width: 100%; /* Prevent the container from growing beyond its parent */
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  .description h2 {
+    margin: 0; /* Remove default margins */
+    white-space: nowrap;
+  }
+  
+  .description p {
+    margin: 0; /* Remove default margins */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Ensure wrapping of long text */
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    max-width: 100%;
+    text-align: center;
+  }

@@ -1,0 +1,12 @@
+.background-gradient {
+    width: 100vw;
+    height: 100vh; 
+    /*Adds the diagonal gradiant, adjust the 45 for angle, and %s for the color distribution*/
+    background: linear-gradient(45deg, #633B48 0% , #F1E8E8 50%); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); Shadow properties */
+}

@@ -1,0 +1,64 @@
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form styling */
+form {
+    background-color: #f9f9f9;  /* Light background for form */
+    padding: 10px;              /* Padding inside form */
+    border-radius: 10px;         /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    display: flex;
+    flex-direction: column;      /* Stack inputs vertically */
+    gap: 20px;                   /* Space between form elements */
+}
+  
+/* Input styling */
+input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded input corners */
+    font-size: 16px;
+    width: 300px; /* Fixed width for inputs */
+    display: flex;
+}
+
+h2 {
+    margin: 20;
+    padding: 0px;
+    font-size: large;
+    text-align: center;
+}
+  
+/* Button styling */
+.main-login-button {
+    padding: 10px;
+    background-color: #633B48; 
+    opacity: 0.9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.main-login-button:hover {
+    background-color: #633B48;
+    opacity: 1;
+}
+
+.signup-button {
+    padding: 10px;
+    background-color: #633B48; 
+    opacity: 0.9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+

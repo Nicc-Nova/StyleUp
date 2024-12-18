@@ -1,0 +1,62 @@
+.banner-container {
+  /*Container for full banner menu*/
+  display: flex;
+  flex-direction: row;  /*Ensures elements are ordered horizontally*/
+  justify-content: space-between; /*Position of elements are set by distance between*/
+  align-items: center; /*Keeps elements ordered from the center out*/
+  padding: 5px; /*Padding in all cardinal directions*/
+  background-color: #ffffff; /*Background white*/
+  height: 90px;  /*Height of Banner*/
+  width: 100vw;  /*Width is the length of the screen*/
+  box-shadow: rgb(38, 57, 77) 0px 10px 15px -10px;
+  position: fixed; /*ensures it is in the same spot on every screen*/
+  top: 0; /*On the top of the page*/
+  left: 0; /*On the left of the page*/
+  z-index: 3; /*Determines overlap*/
+}
+
+
+.logo {
+  /*Logo Element, connects to LogoButton.js*/
+  display: flex;
+  margin-left: 100px;
+}
+
+.button-container{
+  /*Container for Log in/sign up buttons*/
+  display: flex;
+  gap: 15px;
+  margin-right: 150px;
+  margin-top: 20px;
+}
+
+/* Button styling */
+/*For Log in, Sign Up, and Sign Out*/
+.button-style {
+  padding: 5px;
+  background-color: #633B48; 
+  opacity: 0.9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  height: 35px;
+  transition: all 0.3s ease;
+}
+
+.button-style:hover {
+  background-color: #633B48;
+  opacity: 1;
+}
+
+
+.user-info {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px ;
+  height:35px;
+  
+  display: flex;
+  align-items: center;
+}

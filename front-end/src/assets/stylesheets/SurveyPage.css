@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*Survey Page*/
+
+body {
+  font-family: 'Roboto', sans-serif; /* Main font for text */
+  color: #333333; /* Dark gray for better readability */
+  background-color: #F1E8E8; /* Light pinkish background */
+  line-height: 1.6;
+}
+
+.survey-page {
+  display: flex;
+  /*flex-direction: row; /* Align sidebar and content horizontally */
+  height: 100vh; /* Ensure the full height is used */
+  background-color: #F1E8E8;
+}
+
+.survey-sidebar {
+  width: 150px; /* Set the new desired width */
+  position: fixed; /* Fix it to the left side of the screen */
+  left: -70px; /* Move it to the left by the amount of extra width */
+  background-color: #e0d5d5; /* Sidebar background color */
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.sidebar-item {
+  width: 70px;
+  height: 50px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  transform: translateY(-2px);
+}
+
+.survey-main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto; /* In case the content overflows */
+  background-color: #633B4B; /*BREAKING*/
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  flex-direction:column;
+  align-items: center;
+  display: flex;
+  flex-grow: 1; /* Fills remaining space */
+  margin-left: 130px; /* Make room for the sidebar */
+  margin-top: 90px; /* Ensures the content starts below the BannerMenu */
+  justify-content: center;
+}
+
+.question-container {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #F1E8E8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: #333333;
+  margin-top: 90px;
+}
+
+h1 {
+  font-size: 2rem; /* Large font size for main question title */
+  font-weight: 700; /* Bold font weight */
+  text-align: center;
+  color: #633B48; /* Dark theme color for main headers */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem; /* Slightly smaller for subtitle */
+  font-weight: 500;
+  color: #333333; /* Dark gray for readability */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Button Styling */
+.nav-button, .next-button, .back-button {
+  background-color: #633B48; /* Dark theme color for buttons */
+  color: #F1E8E8; /* Light theme color for contrast */
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.nav-button:hover, .next-button:hover, .back-button:hover {
+  background-color: #7f5568; /* Slightly lighter on hover */
+  transform: translateY(-2px);
+}
+
+.nav-button:active, .next-button:active, .back-button:active {
+  background-color: #5a2f3a; /* Darker shade on click */
+  transform: translateY(1px);
+}
+
+/* Option Styling (Question 1) */
+.option {
+  display: flex;
+  align-items: center;
+  background: #eae3e3; /* Soft gray background for options */
+  padding: 14px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #333333; /* Dark text for readability */
+}
+
+.option:hover {
+  background: #d6c8c8; /* Light pinkish gray on hover */
+  transform: translateY(-2px);
+}
+
+/* Color Options (Question 2) */
+.color-option {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #633B48; /* Deep theme color */
+}
+
+.color-option.selected {
+  border: 3px solid #F1E8E8; /* Light theme border for selected state */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+/* Aesthetic Options as Cards (Question 3) */
+.aesthetic-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Even spacing */
+  justify-content: center;
+  margin-top: 900px;
+}
+
+.aesthetic-option {
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #F1E8E8;
+}
+
+.aesthetic-option img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.aesthetic-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.checkbox-large {
+  transform: scale(1.5); /* Large checkbox */
+  margin-top: 10px;
+  color: #333333;
+}
+
+/* Budget Slider (Question 4) */
+.budget-slider {
+  width: 100%;
+  margin-top: 20px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #d6c8c8; /* Light pinkish gray for slider track */
+  outline: none;
+}
+
+.budget-slider::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #633B48; /* Deep theme color for thumb */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.budget-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.budget-display {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Survey Summary Container */
+.responses-summary {
+  background-color: #ffffff; /* White background to frame the summary */
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #333333; /* Dark gray text */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.responses-summary h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #633B48; /* Dark theme color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the List */
+.responses-summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styling for Each Answer Item */
+.responses-summary li {
+  padding: 15px 20px;
+  border: 1px solid #F1E8E8; /* Light border for separation */
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333333;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Divide question and answer */
+  align-items: center;
+  gap: 10px;
+}
+
+.responses-summary li:last-child {
+  margin-bottom: 0; /* Remove margin from last item */
+}
+
+/* Styling for Question Labels */
+.responses-summary li strong {
+  color: #633B48; /* Dark theme color for question labels */
+  font-weight: 600;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Styling for Answer Text */
+.responses-summary li span {
+  color: #555555; /* Slightly lighter gray for answers */
+  font-size: 1rem;
+}

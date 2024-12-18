@@ -1,0 +1,63 @@
+.page-title {
+    height: 50px;
+    width: calc(100vw - 70px - 130px);
+    background-color: #660C0C33; /*Background color with opacity [CC] #------CC*/
+    display: flex;
+    margin-left:70px; 
+    margin-top: 40px;
+    align-items: center;
+}
+
+.image-style {
+    height: 35px;
+    width: 70px;
+    display: inline;
+    overflow: hidden; /*cut out words from the logo*/ 
+    position: relative; 
+    filter: brightness(0); /*Make logo black*/
+}
+
+.main-content {
+    flex-direction:column;
+    overflow-y:auto;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.no-room-message {
+    margin-top:25vh;
+}
+.no-room-message p {
+    font-size: 40pt;
+}
+
+.arrow-container {
+    position: relative;
+    top: -70px;
+    left: -400px;
+    margin-bottom: -400px;
+    z-index: 2;
+}
+
+.rooms-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 70px - 130px); /* Ensures the width aligns with .page-title */
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.room-item {
+    width: 60%; /* Adjust as needed */
+    background-color: #f5f5f5;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}

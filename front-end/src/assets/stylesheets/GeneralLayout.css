@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Ensures the header is always on top */
+    height: 100vh; /* Full height of the page */
+}
+  
+.main-content {
+    display: flex;
+    flex-grow: 1; /* Fills remaining space */
+    margin-top: 90px; /* Ensures the content starts below the BannerMenu */
+    margin-left: 130px; /* Ensures the content starts to the right of the sidebar */
+    justify-content: center;
+    text-align: center;
+}
+  
+.sidebar {
+    position: fixed;
+    top: 90px; /* Below the fixed header */
+    left: 0;
+    width: 130px;
+    height: calc(100vh - 90px); /* Sidebar height takes the remaining height under BannerMenu */
+    background-color: #633B48;
+    z-index: 2;
+}
+
+.sidebar-button {
+    position: relative;
+    background-color: transparent;
+    border: none,;
+    cursor: pointer;
+    padding: 30px;
+}
